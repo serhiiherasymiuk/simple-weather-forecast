@@ -46,14 +46,14 @@ function isDay() {
 function CheckWeatherImage(weather) {
     weatherImage = ''
     switch(weather) {
-        case 'Clear': weatherImage = './Weather/Clear'; break;
-        case 'Clouds': weatherImage =  './Weather/Clouds'; break;
-        case 'Drizzle': weatherImage = './Weather/Drizzle'; break;
-        case 'Fog': return './Weather/Fog.png';
-        case 'Rain': weatherImage = './Weather/Rain'; break;
-        case 'Snow': weatherImage = './Weather/Snow'; break;
-        case 'Thunderstorm': weatherImage = './Weather/Thunderstorm'; break;
-        default: return './Weather/Wind.png'
+        case 'Clear': weatherImage = './weather/Clear'; break;
+        case 'Clouds': weatherImage =  './weather/Clouds'; break;
+        case 'Drizzle': weatherImage = './weather/Drizzle'; break;
+        case 'Fog': return './weather/Fog.png';
+        case 'Rain': weatherImage = './weather/Rain'; break;
+        case 'Snow': weatherImage = './weather/Snow'; break;
+        case 'Thunderstorm': weatherImage = './weather/Thunderstorm'; break;
+        default: return './weather/Wind.png'
     };
     if(!isDay())
         return weatherImage += "_Night.png"
