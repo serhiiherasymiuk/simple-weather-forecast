@@ -138,7 +138,7 @@ async function Search(city) {
     const searchInput = document.getElementById('search-input')
     if (city != undefined)
         searchInput.value = city
-    await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value}&limit=5&appid=${appid}`)
+    await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value}&limit=5&appid=${appid}`)
     .then(response => response.json())
     .then(json => {
         const current = document.getElementById('current')
@@ -320,7 +320,7 @@ function FiveDayForecast(json) {
 }
 
 function GetCity(callback) {
-    $.get("http://ipinfo.io", function(response) {
+    $.get("https://ipinfo.io", function(response) {
       var city = response.city
       callback(city)
     }, "jsonp")
